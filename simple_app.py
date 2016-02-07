@@ -12,8 +12,17 @@ def index(name="Treehouse"): # FUNCTION / VIEW
 @app.route('/add/<float:num1>/<float:num2>') # Add two floats
 @app.route('/add/<int:num1>/<float:num2>') # Add one integer and one float
 @app.route('/add/<float:num1>/<int:num2>') # Add one float and one integer
+
 def add(num1, num2):
-	return '{} + {} = {}'.format(num1, num2, num1 + num2) # return string
+
+	return """
+	<html>
+	<head><title>Adding:</title></head>
+	<body>
+	<h1>{} + {} = {}</h1>
+	</body>
+	</html>
+	""".format(num1, num2, num1 + num2) # return string
 
 # RUN
 app.run(debug=True)
