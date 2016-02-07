@@ -9,7 +9,8 @@
         <!-- url_for generates the url for a particular route automatically, posting the results of the form to this url will feed the data into our function -->
         <form action="{{ url_for('save') }}" method="POST">
             <label>Name your bear</label>
-            <input type="text" name="name" value="" autofocus>
+            <!-- try to get the saves name value, if it doesn't exist default back to an empty string. "saves" is what we named the data that is passed to the index view -->
+            <input type="text" name="name" value="{{ saves.get('name','') }}" autofocus>
             <input type="submit" value="Let's build it!">
         </form>
     </div>
