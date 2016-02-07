@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>XXXXXX</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <!-- Google Font: Open Sans -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -40,9 +40,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container logotag">
-        <h1><img src="img/altMBA_Logotype_v01_150910_Inverse.svg" alt="altMBA"/></h1>
-        <p>An intensive, 4-week online workshop designed to accelerate leaders who are change agents for the future. Designed by Seth Godin, for you.</p>
-
+        
       </div>
     </div> <!-- end jumbotron -->
 
@@ -50,58 +48,18 @@
 
     <div class="container-fluid leaders">
       <div class="container">
-        <h2 class="heavy text-uppercase text-center">Enabling Leaders To Create Change</h2>
-        <p class="light tagline text-center">Reaching the next level</p>
+       {% block content %}{% endblock %}
 
 
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
-            <p>Reaching the next level of leadership requires a shift in posture, in decision-making, and, most of all, in choosing to be a linchpin.</p>
-
-            <p>Without guidance, this process can take years of trial-and-error. The altMBA accelerates this personal and professional transformation by providing a deep view of leadership, organizations, and change.</p>
-
-            <p>Discover your own potential. Level up.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non tortor sapien. Sed eu lacinia ligula, sed posuere ex. Morbi convallis enim nibh, at pretium metus sollicitudin quis. Quisque efficitur odio a urna posuere, a lobortis enim consequat. Cras in tincidunt diam. Vestibulum eu lorem mi. Sed mi sapien, porttitor at facilisis nec, tempus luctus tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ut justo consectetur, feugiat magna quis, egestas nibh. Nullam turpis neque, suscipit vel tempus ut, dignissim id nulla. Integer gravida congue nisi sit amet consequat. Vestibulum eget arcu commodo, viverra velit at, vestibulum est. Sed quis maximus mauris. Maecenas semper iaculis commodo.</p>
           </div>
         </div>        
         
       </div> <!--end container -->
     </div> <!--end leaders-->
 
-
-
-
-     <div class="container-fluid admissions">
-      <div class="container">
-        <h2 class="heavy text-uppercase text-center">Admissions</h2>
-        <p class="light tagline text-center">Is this program for you?</p>
-        
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-            <p>Our curriculum is hands-on. More than 75% of your time is dedicated to shipping your work—practical projects that allow you to apply what you learn. Tuition is $3,000, and most large companies will reimburse you (ask your HR team).</p> 
-
-            <p>The altMBA is for doers. If this sounds like you, we invite you to apply.</p>
-            
-            <!-- <p>Our early decision deadline is January 10 at midnight ET, and the regular deadline is <strong>January 17 at midnight ET.</strong></p> -->
-            
-          </div>
-        </div>
-
-       
-
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-
-            <p>Admission is selective. We prioritize two things: your professional achievements, and your ruckusmaker attitude.</p>
-
-            <p>Questions? Some of the things we get asked a lot: What is a <a href="http://info.altmba.com/faq.html#what-is-the-calendar-like">typical day</a>? What are the <a href="http://info.altmba.com/faq.html#what-are-the-time-zones-available">time zones</a> for the program? What is your <a href="http://info.altmba.com/faq.html#what-is-the-curriculum-like">curriculum</a>? Do you offer <a href="https://player.vimeo.com/video/134327509">informational webinars</a>? Who are your <a href="http://www.altmba.com">students</a>? Who is <a href="http://sethgodin.com">Seth Godin</a>? What are important <a href="http://info.altmba.com/faq.html#what-are-the-important-dates-and-deadlines">dates and deadlines</a>? Where can I <a href="http://www.altmba.com/apply">apply</a>?</p>
-
-            <p>We encourage you to read our <a href="http://info.altmba.com/faq.html">FAQ</a>. We have answers to more than thirty other common questions.</p>
-
-          </div>
-        </div>
-          
-      </div>
-    </div> <!-- end admissions -->
 
       <footer>
       </footer>
