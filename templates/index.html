@@ -6,7 +6,8 @@
         <img src="/static/img/bear_avatar.svg" class="bear-avatar" />
     </div>
     <div class="grid-100">
-        <form action="" method="POST">
+        <!-- url_for generates the url for a particular route automatically, posting the results of the form to this url will feed the data into our function -->
+        <form action="{{ url_for('save') }}" method="POST">
             <label>Name your bear</label>
             <input type="text" name="name" value="" autofocus>
             <input type="submit" value="Let's build it!">
