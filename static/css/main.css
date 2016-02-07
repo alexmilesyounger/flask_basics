@@ -98,6 +98,7 @@ opacity: 1;
   margin: 35px 0 33px 33px;
   text-align: left;
   width: 100%;
+  font-size: 1.6em;
 }
 
 .category-title {
@@ -128,7 +129,7 @@ a {
 .grid-100 {
   width: 100%;
   display: block;
-	float:left;
+  float:left;
 }
 
 .grid-90 {

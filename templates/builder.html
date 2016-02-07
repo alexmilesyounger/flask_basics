@@ -6,11 +6,17 @@
     <div class="grid-100 row">
         <div class="grid-30">
             <div class="title">
-                <input type="text" name="name" value="">
+                <input type="text" name="name" value="{{ saves.get('name','') }}">
             </div>
         </div>
         <div class="grid-70">
             <div class="colors">
+                {% for color in options['colors'] %}
+                <input type="radio" id="{{ color }}" name="colors" value="{{ color }}"
+                    {% if saves.get('color') == color %}checked{% endif %}>
+                <label for="{{ color }}"></label>
+
+                {% endfor %}
                 <button class="btn">Update</button>
             </div>
         </div>
