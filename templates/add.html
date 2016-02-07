@@ -1,9 +1,5 @@
-<!doctype html>
-<html>
-	<head>
-		<title>Adding!</title>
-	</head>
-	<body>
+{% extends "layout.html" %}
+{% block title %}Adding!{% endblock %}
+{% block content %}
 		<h1>{{ num1 }} + {{ num2 }} = {{ num1 + num2 }}</h1>
-	</body>
-</html>
+{% endblock %}
