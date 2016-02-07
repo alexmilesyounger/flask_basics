@@ -1,8 +1,18 @@
 from flask import Flask
+from flask import redirect
 from flask import render_template
+from flask import request
 import twilio.twiml
 
 app = Flask(__name__)
+
+@app.route("/sms", methods=['GET', 'POST'])
+def reply_sms(reply_message="wtf?"):
+	"""Respond to player with sms message."""
+	resp = twilio.twiml.Response()
+	# resp.sms(reply_message)
+	resp.message(reply_message)
+	return str(resp)
 
 @app.route('/') # ROUTE
 @app.route('/<name>') # ALTERNATE ROUTE
@@ -20,14 +30,6 @@ def add(num1, num2):
 	context = {'num1': num1, 'num2': num2}
 	return render_template("add.html", **context)
 
-
-
-@app.route("/sms", methods=['GET', 'POST'])
-def reply_sms(reply_message="wtf?"):
-	"""Respond to player with sms message."""
-	resp = twilio.twiml.Response()
-	resp.sms(reply_message)
-	return str(resp)
 
 
 # RUN
