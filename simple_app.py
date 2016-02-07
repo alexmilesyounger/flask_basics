@@ -1,8 +1,8 @@
 from flask import Flask
-from flask import redirect
+# from flask import redirect
 from flask import render_template
-from flask import request
-import twilio.twiml
+# from flask import request
+# import twilio.twiml
 
 app = Flask(__name__)
 
