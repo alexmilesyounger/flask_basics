@@ -2,3 +2,4 @@ venv,
 *.pyc
 .env
 pickadoor.py
+.DS_Store
