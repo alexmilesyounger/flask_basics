@@ -8,7 +8,10 @@ def index(name="Treehouse"): # FUNCTION / VIEW
 	return "Hello from {}".format(name)
 
 
-@app.route('/add/<int:num1>/<int:num2>') # Add two numbers
+@app.route('/add/<int:num1>/<int:num2>') # Add two integers
+@app.route('/add/<float:num1>/<float:num2>') # Add two floats
+@app.route('/add/<int:num1>/<float:num2>') # Add one integer and one float
+@app.route('/add/<float:num1>/<int:num2>') # Add one float and one integer
 def add(num1, num2):
 	return '{} + {} = {}'.format(num1, num2, num1 + num2) # return string
 
