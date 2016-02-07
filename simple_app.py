@@ -15,8 +15,8 @@ def index(name="Treehouse"): # FUNCTION / VIEW
 @app.route('/add/<float:num1>/<int:num2>') # Add one float and one integer
 
 def add(num1, num2):
-	return render_template("add.html")
-	
+	return render_template("add.html", num1=num1, num2=num2)
+
 # RUN
 app.run(debug=True)
 # app.run(debug=True, port=8000, host='0.0.0.0') # for treehouse
