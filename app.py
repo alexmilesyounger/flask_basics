@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import flash
 from flask import make_response
 from flask import redirect
 from flask import render_template
@@ -8,6 +9,7 @@ import json
 from options import DEFAULTS
 
 app = Flask(__name__)
+app.secret_key = 'vKuqEUNvdn8YNH4A8KsVchHeNNEBKM'
 
 def get_saved_data():
 	try:
@@ -33,6 +35,8 @@ def builder():
 
 @app.route('/save', methods=['POST'])
 def save():
+	# flash messages send tiny short-term messages to users.
+	flash("Alright! That looks awesome!")
 	response = make_response(redirect(url_for('builder')))
 	data = get_saved_data()
 	data.update(dict(request.form.items()))
