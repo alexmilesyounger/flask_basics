@@ -6,13 +6,13 @@ import twilio.twiml
 
 app = Flask(__name__)
 
-@app.route("/sms", methods=['GET', 'POST'])
-def reply_sms(reply_message="wtf?"):
-	"""Respond to player with sms message."""
-	resp = twilio.twiml.Response()
+# @app.route("/sms", methods=['GET', 'POST'])
+# def reply_sms(reply_message="wtf?"):
+	# """Respond to player with sms message."""
+	# resp = twilio.twiml.Response()
 	# resp.sms(reply_message)
-	resp.message(reply_message)
-	return str(resp)
+	# resp.message(reply_message)
+	# return str(resp)
 
 @app.route('/') # ROUTE
 @app.route('/<name>') # ALTERNATE ROUTE
