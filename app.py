@@ -42,5 +42,4 @@ def save():
 		)
 	return response
 
-if __name__ =='__main':
-	app.run(debug=True)
+app.run(debug=True)
