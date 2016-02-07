@@ -6,7 +6,8 @@ app = Flask(__name__)
 @app.route('/') # ROUTE
 @app.route('/<name>') # ALTERNATE ROUTE
 def index(name="Treehouse"): # FUNCTION / VIEW
-	return "Hello from {}".format(name)
+	context = {'name': name}
+	return render_template("index.html", **context)
 
 
 @app.route('/add/<int:num1>/<int:num2>') # Add two integers
