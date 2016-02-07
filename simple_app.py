@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -14,16 +15,8 @@ def index(name="Treehouse"): # FUNCTION / VIEW
 @app.route('/add/<float:num1>/<int:num2>') # Add one float and one integer
 
 def add(num1, num2):
-
-	return """
-	<html>
-	<head><title>Adding:</title></head>
-	<body>
-	<h1>{} + {} = {}</h1>
-	</body>
-	</html>
-	""".format(num1, num2, num1 + num2) # return string
-
+	return render_template("add.html")
+	
 # RUN
 app.run(debug=True)
 # app.run(debug=True, port=8000, host='0.0.0.0') # for treehouse
